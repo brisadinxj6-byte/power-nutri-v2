@@ -1,9 +1,9 @@
 const PN_IMAGES={
  hero:'https://images.unsplash.com/photo-1646072507379-c6c9dca7de0c?auto=format&fit=crop&w=1600&q=85',
- whey:'https://images.unsplash.com/photo-1774793476310-fd7d843184c5?auto=format&fit=crop&w=900&q=82',
- creatine:'https://images.unsplash.com/photo-1704650311298-4d6915d34c64?auto=format&fit=crop&w=900&q=82',
- supplements:'https://images.unsplash.com/photo-1709976142774-ce1ef41a8378?auto=format&fit=crop&w=900&q=82',
- gym:'https://images.unsplash.com/photo-1768161680813-615df885ff82?auto=format&fit=crop&w=900&q=82'
+ whey:'https://images.unsplash.com/photo-1693996045300-521e9d08cabc?auto=format&fit=crop&w=1100&q=82',
+ creatine:'https://images.unsplash.com/photo-1704650311481-a3cd10c5b3fb?auto=format&fit=crop&w=1100&q=82',
+ supplements:'https://images.unsplash.com/photo-1704650311481-a3cd10c5b3fb?auto=format&fit=crop&w=1100&q=82',
+ gym:'https://images.unsplash.com/photo-1693996045300-521e9d08cabc?auto=format&fit=crop&w=1100&q=82'
 };
 const PN_PRODUCTS=[
 {id:1,name:'Whey Protein',brand:'Integralmedica',category:'whey',desc:'Opção de proteína para complementar sua rotina alimentar e seus treinos.',image:PN_IMAGES.whey,alt:'Pote neutro de whey protein com scoop de pó',url:'https://meli.la/1JdTWc3',tag:'Mais procurado'},

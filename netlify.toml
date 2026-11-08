@@ -1,46 +1,13 @@
-# Power Nutri - Configuração Netlify
-# Performance Inteligente
+
+# Power Nutri V2 - Configuração Netlify
 
 [build]
-  command = "npm run build"
-  publish = "/"
-  functions = "netlify/functions"
+  publish = "."
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-# Headers de Segurança
+# Headers de segurança
 [[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
-    X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-
-# Cache headers para assets estáticos
-[[headers]]
-  for = "/public/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# Cache headers para HTML
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-# Compressão
-[[plugins]]
-  package = "netlify-plugin-no-404-on-github-pages"
-
-# Environment variables (opcional)
-[env.production]
-  SITE_URL = "https://powernutri.com.br"
-  ANALYTICS_ID = "seu-id-google-analytics"
-
-[env.development]
-  SITE_URL = "http://localhost:8000"

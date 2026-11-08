@@ -1,0 +1,26 @@
+/* PALETA DE CORES - BLACK NICHE PREMIUM */
+:root {
+  /* Cores principais */
+  --color-bg-dark: #0a0a0a;        /* Fundo preto profundo */
+  --color-accent-red: #d32f2f;     /* Vermelho intenso */
+  --color-text-white: #ffffff;     /* Branco para textos */
+  --color-text-gray: #9e9e9e;      /* Cinza secundário */
+  --color-border: #212121;         /* Bordas discretas */
+  
+  /* Tipografia */
+  --font-family-primary: 'Arial Black', sans-serif;
+  --font-family-secondary: 'Arial', sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-italic: 700;
+  
+  /* Espaçamento */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(255, 255, 255, 0.1);
+  --shadow-md: 0 4px 8px rgba(255, 255, 255, 0.15);
+}

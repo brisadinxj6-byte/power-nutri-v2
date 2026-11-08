@@ -1,0 +1,84 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "⚡ PROMO DO DIA",
+      "slug": "promo-do-dia",
+      "description": "Ofertas selecionadas para quem gosta de aproveitar oportunidades.",
+      "icon": "⚡",
+      "url": "https://meli.la/1ESKEHW"
+    },
+    {
+      "id": 2,
+      "name": "💪 CREATINA",
+      "slug": "creatina",
+      "description": "Explore opções, características e ofertas de creatina.",
+      "icon": "💪",
+      "url": "https://meli.la/2L324Yk"
+    },
+    {
+      "id": 3,
+      "name": "🥤 WHEY PROTEIN",
+      "slug": "whey-protein",
+      "description": "Conheça alternativas de proteínas e encontre a opção que combina com sua preferência.",
+      "icon": "🥤",
+      "url": "https://meli.la/1JdTWc3"
+    },
+    {
+      "id": 4,
+      "name": "🚀 PRÉ-TREINO",
+      "slug": "pre-treino",
+      "description": "Explore produtos e conheça suas características.",
+      "icon": "🚀",
+      "url": "https://meli.la/2kYg5QK"
+    },
+    {
+      "id": 5,
+      "name": "📈 HIPERCALÓRICOS",
+      "slug": "hipercaloricos",
+      "description": "Descubra opções para complementar sua alimentação.",
+      "icon": "📈",
+      "url": "https://meli.la/1JvXZfN"
+    },
+    {
+      "id": 6,
+      "name": "🔋 RECUPERAÇÃO",
+      "slug": "recuperacao",
+      "description": "Explore produtos relacionados à recuperação e à rotina esportiva.",
+      "icon": "🔋",
+      "url": "https://meli.la/2naxtDX"
+    },
+    {
+      "id": 7,
+      "name": "💊 CÁPSULAS E VITAMINAS",
+      "slug": "capsulas-vitaminas",
+      "description": "Conheça diferentes opções e suas características.",
+      "icon": "💊",
+      "url": "https://meli.la/18D5Gf2"
+    },
+    {
+      "id": 8,
+      "name": "⚖️ EMAGRECIMENTO",
+      "slug": "emagrecimento",
+      "description": "Explore produtos e informações disponíveis na categoria.",
+      "icon": "⚖️",
+      "url": "https://meli.la/2aH3YLi"
+    },
+    {
+      "id": 9,
+      "name": "🥤 COPOS E GARRAFAS",
+      "slug": "copos-garrafas",
+      "description": "Acessórios para acompanhar sua rotina.",
+      "icon": "🥤",
+      "url": "https://meli.la/2Duq8Ln"
+    },
+    {
+      "id": 10,
+      "name": "🎯 COMBOS",
+      "slug": "combos",
+      "description": "Explore combinações de produtos e ofertas.",
+      "icon": "🎯",
+      "url": "https://meli.la/2GNMcKK"
+    }
+  ]
+}

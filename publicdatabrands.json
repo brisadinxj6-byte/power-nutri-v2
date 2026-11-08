@@ -1,0 +1,44 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "name": "INTEGRALMEDICA",
+      "slug": "integralmedica",
+      "description": "Explore suplementos, conheça os produtos e descubra ofertas da marca.",
+      "url": "https://meli.la/2FjCFjq",
+      "logo": "integralmedica.png"
+    },
+    {
+      "id": 2,
+      "name": "DARK LAB",
+      "slug": "dark-lab",
+      "description": "Tecnologia, suplementação e opções para diferentes objetivos.",
+      "url": "https://meli.la/117ygej",
+      "logo": "dark-lab.png"
+    },
+    {
+      "id": 3,
+      "name": "BLACK SKULL",
+      "slug": "black-skull",
+      "description": "Conheça produtos e ofertas da Black Skull.",
+      "url": "https://meli.la/2AmoHWt",
+      "logo": "black-skull.png"
+    },
+    {
+      "id": 4,
+      "name": "GROWTH",
+      "slug": "growth",
+      "description": "Explore o catálogo e encontre opções para sua rotina.",
+      "url": "https://meli.la/1T9AST8",
+      "logo": "growth.png"
+    },
+    {
+      "id": 5,
+      "name": "SOLDIERS",
+      "slug": "soldiers",
+      "description": "Descubra produtos e oportunidades da Soldiers.",
+      "url": "https://meli.la/2qCDmJK",
+      "logo": "soldiers.png"
+    }
+  ]
+}

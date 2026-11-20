@@ -36,20 +36,24 @@ Este arquivo é o ponto de continuidade do projeto. Ao concluir cada etapa, atua
   - Documentação: `261d99744faca5a956a2f7fc21502bd8048daa0d`
   - README: `3d6c5d6a051ce4f4be961e38cf03d668abfa3a2a`
 
-### Próximo passo único — conectar/preparar Supabase
-Antes de prosseguir, precisamos confirmar se o usuário já possui um projeto Supabase para este sistema.
+### Etapa 2 — projeto Supabase criado
+- Estado: projeto criado e exibido como Healthy no painel.
+- Nome exibido: `netflixfull1991-Projeto de depuração`.
+- Project ref: `oizglhttuzecwjuzdfih`.
+- Região observada: West US (Oregon), identificador `us-west-2`.
+- URL pública do projeto: `https://oizglhttuzecwjuzdfih.supabase.co`.
+- Decisão operacional: manter este projeto como ambiente de desenvolvimento para evitar criar/apagar recursos sem necessidade. A região não pode ser alterada in-place; caso a latência/região brasileira se torne requisito, criar outro projeto e migrar antes de produção.
+- O painel mostrou “No repository connected”. A conta GitHub conectada ao ChatGPT não significa que o repositório já esteja ligado à integração GitHub do Supabase.
+- A conexão GitHub do Supabase ainda precisa ser habilitada em Project Settings > Integrations > GitHub Integration, escolhendo o repositório `brisadinxj6-byte/power-nutri-v2` e o diretório de trabalho `.`.
+- Nenhuma migration foi aplicada. Nenhuma credencial ou segredo foi copiado para o GitHub/chat.
 
-O usuário precisa:
-1. Abrir ou criar um projeto em https://supabase.com/dashboard.
-2. Informar apenas se o projeto já existe ou se precisa criar um.
-3. Não enviar senha, chave service-role, token ou segredo pelo chat.
-4. Quando chegar a etapa de configuração, inserir as variáveis diretamente nos painéis oficiais, seguindo instruções guiadas.
-
-Ainda não executar a migration até confirmar o projeto correto e revisar as políticas RLS em ambiente de teste.
+### Próximo passo
+- Habilitar a integração GitHub no painel Supabase e conectar `brisadinxj6-byte/power-nutri-v2`, branch `feature/power-nutri-hub-foundation` se a interface permitir selecionar branch; diretório de trabalho `.`.
+- Depois revisar a migration e políticas RLS, então aplicar em desenvolvimento e testar.
 
 ## Pendências gerais
 
-- Confirmar projeto Supabase.
+- Conectar GitHub ao projeto pela integração própria do Supabase.
 - Aplicar e testar migration/RLS.
 - Configurar autenticação e papéis.
 - Construir painel administrativo.

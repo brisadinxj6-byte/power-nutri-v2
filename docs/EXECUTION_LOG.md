@@ -63,6 +63,22 @@ Este arquivo é o ponto de continuidade do projeto. Ao concluir cada etapa, atua
 - Implementar pedidos, estoque, precificação, auditoria e homologação.
 - Verificar branch de deploy no Netlify antes de qualquer publicação.
 
+
+
+### Etapa 3 — primeira interface isolada do Hub
+- Estado: estrutura visual inicial criada na pasta `hub/`; não conectada ao banco e não publicada em produção.
+- Arquivos adicionados:
+  - `hub/index.html`: navegação e telas de visão geral, produtos, fornecedores, pedidos, importação, precificação e integrações.
+  - `hub/hub.css`: layout responsivo e identidade visual própria.
+  - `hub/hub.js`: navegação entre módulos e pré-visualização local de CSV (sem upload, sem gravação).
+- Segurança/limites: a interface informa que não há dados operacionais conectados; nenhum pedido, estoque ou métrica fictícia é apresentado como real. A vitrine raiz não foi alterada.
+- Commits:
+  - HTML: `72b973405440b2102dacdf5c20db4ce8937270ca`
+  - CSS: `ef4a984d516680df4daa269fd29899b90cbbc45c`
+  - JavaScript: `d93f2bdf1741c3666c8c098fcf4742aedfb68f76`
+- Testes: revisão estática do conteúdo e dos caminhos; teste de navegador/build ainda não executado. Supabase continua sem conexão confirmada e a migration não foi aplicada.
+- Próxima etapa: validar a interface em ambiente de preview e implementar o catálogo administrativo depois de conectar/testar o banco e autenticação.
+
 ## Modelo de atualização por etapa
 
 Para cada etapa concluída, registrar:

@@ -250,19 +250,9 @@ for all using (public.current_app_role() = 'admin')
 with check (public.current_app_role() = 'admin');
 create policy "supplier_events_supplier_read" on public.supplier_order_events
 for select to authenticated using (supplier_id = public.current_supplier_id());
-create policy "supplier_events_supplier_insert" on public.supplier_order_events
-for insert to authenticated with check (
-  supplier_id = public.current_supplier_id()
-  and created_by = auth.uid()
-  and event_type in ('accepted','unavailable','picking','dispatched','tracking_updated','note')
-  and exists (
-    select 1
-    from public.sales_order_items soi
-    join public.products p on p.id = soi.product_id
-    where soi.order_id = supplier_order_events.order_id
-      and p.supplier_id = public.current_supplier_id()
-  )
-);
+-- Supplier event creation is intentionally disabled until a server-side
+-- RPC can validate supplier/order ownership without relying on client-supplied IDs.
+
 
 create policy "sync_runs_admin_only" on public.sync_runs
 for all using (public.current_app_role() = 'admin')

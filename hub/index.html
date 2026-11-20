@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1010">
+  <title>Power Nutri Hub | Central de operação</title>
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-icon">PN</span><span><b>POWER NUTRI</b><small>HUB · OPERAÇÃO</small></span></a>
+      <div class="workspace"><span class="dot"></span> Ambiente de desenvolvimento</div>
+      <nav class="nav" aria-label="Menu principal">
+        <button class="nav-link active" data-view="overview"><span>▦</span> Visão geral</button>
+        <button class="nav-link" data-view="products"><span>▤</span> Produtos</button>
+        <button class="nav-link" data-view="suppliers"><span>♧</span> Fornecedores</button>
+        <button class="nav-link" data-view="orders"><span>▣</span> Pedidos</button>
+        <button class="nav-link" data-view="import"><span>⇧</span> Importar catálogo</button>
+        <button class="nav-link" data-view="pricing"><span>⌁</span> Precificação</button>
+        <button class="nav-link" data-view="integrations"><span>⌘</span> Integrações</button>
+      </nav>
+      <div class="sidebar-foot"><span class="status-dot"></span> Protótipo isolado · sem dados reais</div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><span class="eyebrow">POWER NUTRI / HUB</span><h1 id="page-title">Visão geral</h1></div><div class="top-actions"><span class="env-pill">DESENVOLVIMENTO</span><a href="../index.html" class="store-link">Ver vitrine ↗</a></div></header>
+      <div class="notice"><b>Modo de construção:</b> esta área está isolada da vitrine pública. O banco Supabase ainda não está conectado; nenhum número ou pedido exibido aqui é dado operacional.</div>
+      <section class="view active" id="view-overview">
+        <div class="welcome"><div><span class="eyebrow">CENTRAL DE CONTROLE</span><h2>Organize a operação.<br><em>Venda com controle.</em></h2><p>O Hub vai centralizar catálogo, fornecedores, pedidos e formação de preço em um só lugar.</p></div><div class="welcome-mark">PN<span>+</span></div></div>
+        <div class="section-heading"><div><h2>Estrutura do sistema</h2><p>Módulos planejados para a operação própria.</p></div></div>
+        <div class="module-grid">
+          <button class="module-card" data-go="products"><span class="module-icon">▤</span><b>Catálogo</b><small>Produtos, marcas, categorias e SKU.</small><span class="module-state">Interface em construção</span></button>
+          <button class="module-card" data-go="suppliers"><span class="module-icon">♧</span><b>Fornecedores</b><small>Cadastro e acompanhamento de parceiros.</small><span class="module-state">Interface em construção</span></button>
+          <button class="module-card" data-go="orders"><span class="module-icon">▣</span><b>Pedidos</b><small>Fluxo, expedição e rastreamento.</small><span class="module-state">Aguardando integração</span></button>
+          <button class="module-card" data-go="pricing"><span class="module-icon">⌁</span><b>Precificação</b><small>Custos, taxas e margem mínima.</small><span class="module-state">Regras a implementar</span></button>
+        </div>
+        <div class="section-heading"><div><h2>Próximas entregas técnicas</h2><p>Construção por etapas, sem afetar a loja atual.</p></div></div>
+        <div class="task-list"><div><span class="task-number">01</span><span><b>Banco e permissões</b><small>Aplicar migration e testar RLS no Supabase.</small></span><span class="tag pending">Pendente</span></div><div><span class="task-number">02</span><span><b>Catálogo administrativo</b><small>Cadastro, edição, validação e pesquisa de produtos.</small></span><span class="tag building">Em construção</span></div><div><span class="task-number">03</span><span><b>Importação de fornecedor</b><small>Prévia CSV com validação antes de gravar.</small></span><span class="tag planned">Planejado</span></div></div>
+      </section>
+      <section class="view" id="view-products">
+        <div class="section-heading"><div><h2>Catálogo de produtos</h2><p>Base central de itens, marcas, categorias e códigos SKU.</p></div><button class="primary-btn" data-go="import">＋ Preparar importação</button></div>
+        <div class="empty-state"><span>▤</span><h3>Catálogo ainda não conectado</h3><p>Os produtos serão carregados do banco Supabase após a configuração e os testes de permissão. Nenhum produto fictício será apresentado como estoque real.</p></div>
+      </section>
+      <section class="view" id="view-suppliers">
+        <div class="section-heading"><div><h2>Fornecedores</h2><p>Cadastro de parceiros, contatos e prazos de preparação.</p></div></div>
+        <div class="empty-state"><span>♧</span><h3>Nenhum fornecedor carregado</h3><p>O portal Body Burn será habilitado após confirmar o canal oficial de catálogo e o acesso do fornecedor.</p></div>
+      </section>
+      <section class="view" id="view-orders">
+        <div class="section-heading"><div><h2>Pedidos</h2><p>Acompanhamento de pagamento, separação, envio e entrega.</p></div></div>
+        <div class="empty-state"><span>▣</span><h3>Integração ainda não ativa</h3><p>Não há pedidos conectados. A integração Mercado Livre dependerá de autorização oficial e testes antes de qualquer operação real.</p></div>
+      </section>
+      <section class="view" id="view-import">
+        <div class="section-heading"><div><h2>Importar catálogo</h2><p>Primeiro passo: conferir o arquivo antes de qualquer gravação.</p></div></div>
+        <div class="import-panel"><div class="drop-zone"><span class="upload-icon">⇧</span><h3>Selecione um arquivo CSV</h3><p>Esta versão faz apenas leitura e pré-visualização no navegador. Nada será enviado ou salvo.</p><label class="file-btn">Escolher CSV<input id="csv-file" type="file" accept=".csv,text/csv"></label><small id="file-name">Nenhum arquivo selecionado</small></div><div id="csv-result" class="csv-result" aria-live="polite"><span class="muted">A prévia das colunas aparecerá aqui.</span></div></div>
+        <p class="helper">Colunas sugeridas para a próxima etapa: SKU, nome, marca, categoria, custo, preço de venda e estoque. O formato definitivo será validado antes da importação real.</p>
+      </section>
+      <section class="view" id="view-pricing">
+        <div class="section-heading"><div><h2>Precificação</h2><p>Composição do preço mínimo e margem estimada por produto.</p></div></div>
+        <div class="empty-state"><span>⌁</span><h3>Motor de preço a implementar</h3><p>As regras considerarão custo do fornecedor, taxas do canal, impostos, frete, despesas e margem mínima configurável.</p></div>
+      </section>
+      <section class="view" id="view-integrations">
+        <div class="section-heading"><div><h2>Integrações</h2><p>Conexões oficiais necessárias para automatizar a operação.</p></div></div>
+        <div class="integration-list"><article><div class="integration-icon">S</div><div><b>Supabase</b><small>Banco, autenticação e políticas de acesso.</small></div><span class="tag pending">Não conectado</span></article><article><div class="integration-icon">M</div><div><b>Mercado Livre</b><small>OAuth, catálogo, pedidos e logística.</small></div><span class="tag pending">Aguardando autorização</span></article><article><div class="integration-icon">B</div><div><b>Body Burn</b><small>Catálogo e atualização de disponibilidade.</small></div><span class="tag pending">Aguardando confirmação</span></article></div>
+      </section>
+      <footer>Power Nutri Hub · Desenvolvimento modular · A vitrine pública permanece independente.</footer>
+    </main>
+  </div>
+  <script src="hub.js"></script>
+</body>
+</html>

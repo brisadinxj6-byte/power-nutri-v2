@@ -229,9 +229,9 @@ for all using (public.current_app_role() = 'admin')
 with check (public.current_app_role() = 'admin');
 create policy "products_supplier_read" on public.products
 for select to authenticated using (supplier_id = public.current_supplier_id());
-create policy "products_supplier_update" on public.products
-for update to authenticated using (supplier_id = public.current_supplier_id())
-with check (supplier_id = public.current_supplier_id());
+-- Supplier accounts are read-only on the catalog for now. Supplier changes must
+-- go through a validated server-side workflow/RPC so they cannot alter prices,
+-- stock, product identity, or marketplace fields directly.
 
 create policy "price_rules_admin_only" on public.price_rules
 for all using (public.current_app_role() = 'admin')
@@ -255,6 +255,13 @@ for insert to authenticated with check (
   supplier_id = public.current_supplier_id()
   and created_by = auth.uid()
   and event_type in ('accepted','unavailable','picking','dispatched','tracking_updated','note')
+  and exists (
+    select 1
+    from public.sales_order_items soi
+    join public.products p on p.id = soi.product_id
+    where soi.order_id = supplier_order_events.order_id
+      and p.supplier_id = public.current_supplier_id()
+  )
 );
 
 create policy "sync_runs_admin_only" on public.sync_runs
@@ -263,8 +270,9 @@ with check (public.current_app_role() = 'admin');
 
 create policy "audit_log_admin_read" on public.audit_log
 for select using (public.current_app_role() = 'admin');
+-- Audit records are written only by trusted server-side/admin workflows.
 create policy "audit_log_admin_insert" on public.audit_log
-for insert with check (public.current_app_role() = 'admin' or actor_id = auth.uid());
+for insert with check (public.current_app_role() = 'admin');
 
 grant usage on schema public to authenticated;
 grant select, insert, update, delete on all tables in schema public to authenticated;
